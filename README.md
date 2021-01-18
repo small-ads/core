@@ -4,16 +4,16 @@ an open source project that builds free small advertisments
 ### tech
 
 decided:
-* react
-* typescript
+* `react`
+* `typescript`
 * cra
-* lerna 
+* `lerna`
 * we only use hooks
-* styled-components
-* Firebase
-* storybook
-* jest for unit testing 
-* e2e with cypress
+* `styled-components`
+* `firebase`
+* `storybook`
+* `jest` for unit testing 
+* e2e with `cypress`
 
 still to choose: 
 * state-managemenrs
