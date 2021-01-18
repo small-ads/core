@@ -16,6 +16,6 @@ decided:
 * e2e with `cypress`
 
 still to choose: 
-* state-managemenrs
-* linter with prettier and eslint airbnb
+* state-managements
+* linter with `prettier` and `eslint` `airbnb`
 * way to fetch data and trigger actions asynchronusly
