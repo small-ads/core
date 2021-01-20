@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "@small-advertisements/simple-web-components",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,11 +18,9 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "start": "start-storybook -p 6006 -s public",
+    "build": "build-storybook -s public",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
