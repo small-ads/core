@@ -1,16 +1,16 @@
 import React from "react";
-/* import './button.css'; */
+
 import ButtonStyles from "./button.style";
 
 export interface ButtonProps {
-  type: string;
+  type: "primary" | "secondary";
   id: string;
   htmlType: string;
-  onClick: any;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   disabled: boolean | undefined;
-  style: Object;
+  style: object;
   className: string;
-  children: any;
+  children: React.ReactNode;
 }
 
 export function Button({
@@ -25,7 +25,6 @@ export function Button({
 }: ButtonProps) {
   return (
     <ButtonStyles>
-      {/* eslint-disable-next-line */}
       <button
         type={htmlType}
         id={id}
