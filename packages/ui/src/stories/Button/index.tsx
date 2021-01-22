@@ -1,11 +1,10 @@
 import React from "react";
-
-import ButtonStyles from "./button.style";
+import { ButtonStyles } from "./button.style";
 
 export interface ButtonProps {
   type: "primary" | "secondary";
   id: string;
-  htmlType: string;
+  htmlType: "button" | "submit" | "reset" | undefined;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   disabled: boolean | undefined;
   style: object;

@@ -1,4 +1,4 @@
-const colors = {
+export const Colors = {
   primary: "#0071f3",
   secondary: "#ACB1B6",
   active: "#0366d6",
@@ -18,5 +18,3 @@ const colors = {
   textInactive: "#BFBFBF",
   background: "#F2F3F4",
 };
-
-export default colors;

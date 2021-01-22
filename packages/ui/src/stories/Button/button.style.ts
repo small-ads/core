@@ -1,8 +1,7 @@
 import styled from "styled-components";
+import { Colors } from "../../Colors";
 
-import Colors from "../../Colors";
-
-const ButtonStyles = styled.div`
+export const ButtonStyles = styled.div`
   button:disabled,
   button:disabled .component-child {
     cursor: not-allowed !important;
@@ -65,4 +64,4 @@ const ButtonStyles = styled.div`
   }
 `;
 
-export default ButtonStyles;
+
