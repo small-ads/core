@@ -25,7 +25,7 @@ export function Button({
   return (
     <ButtonStyles>
       <button
-      // eslint-disable-next-line react/button-has-type
+        // eslint-disable-next-line react/button-has-type
         type={htmlType}
         id={id}
         disabled={disabled}
