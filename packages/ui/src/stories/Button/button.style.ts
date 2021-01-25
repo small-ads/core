@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Colors } from "../../Colors";
+import styled from 'styled-components';
+import { Colors } from '../../Colors';
 
 export const ButtonStyles = styled.div`
   button:disabled,

@@ -23,7 +23,7 @@
     "start": "start-storybook -p 6006 -s public",
     "build": "build-storybook -s public",
     "test": "react-scripts test",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "eslint": "src --ext .ts,.tsx --config ./.eslintrc.js"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +49,7 @@
     "@storybook/addon-links": "^6.1.14",
     "@storybook/node-logger": "^6.1.14",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.14"
+    "@storybook/react": "^6.1.14",
+    "eslint-config-small-ads": "1.0.0"
   }
 }

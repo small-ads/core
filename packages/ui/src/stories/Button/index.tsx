@@ -1,10 +1,10 @@
-import React from "react";
-import { ButtonStyles } from "./button.style";
+import React from 'react';
+import { ButtonStyles } from './button.style';
 
 export interface ButtonProps {
-  type: "primary" | "secondary";
+  type: 'primary' | 'secondary';
   id: string;
-  htmlType: "button" | "submit" | "reset" | undefined;
+  htmlType: 'button' | 'submit' | 'reset' | undefined;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   disabled: boolean | undefined;
   style: object;
@@ -25,12 +25,14 @@ export function Button({
   return (
     <ButtonStyles>
       <button
+      // eslint-disable-next-line react/button-has-type
         type={htmlType}
         id={id}
         disabled={disabled}
         onClick={onClick}
         className={`${className} ${type}`}
-        style={style}>
+        style={style}
+      >
         {children}
       </button>
     </ButtonStyles>
@@ -40,9 +42,9 @@ export function Button({
 Button.defaultProps = {
   id: null,
   onClick: () => {},
-  type: "primary",
-  htmlType: "button",
+  type: 'primary',
+  htmlType: 'button',
   style: {},
   disabled: false,
-  className: "",
+  className: '',
 };
