@@ -19,7 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "eslint": "src --ext .ts,.tsx --config ./.eslintrc.js"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +41,6 @@
     ]
   },
   "devDependencies": {
-    "eslint-config-small-ads": "file:../../packages/eslint-config-small-ads"
+    "eslint-config-small-ads": "1.0.0"
   }
 }
