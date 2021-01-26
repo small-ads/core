@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "lint": "lerna run eslint"
+    "lint": "lerna run lint"
   },
   "devDependencies": {
     "lerna": "^3.22.1"

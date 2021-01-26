@@ -23,7 +23,7 @@
     "start": "start-storybook -p 6006 -s public",
     "build": "build-storybook -s public",
     "test": "react-scripts test",
-    "eslint": "src --ext .ts,.tsx --config ./.eslintrc.js"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --config ./.eslintrc.js"
   },
   "eslintConfig": {
     "extends": [
