@@ -21,10 +21,6 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react-hooks", "@typescript-eslint/eslint-plugin"],
-  rules: {
-    "import/prefer-default-export": "off",
-    "import/no-extraneous-dependencies": "off",
-  },
   settings: {
     "import/resolver": {
       node: {
@@ -32,12 +28,4 @@ module.exports = {
       },
     },
   },
-  overrides: [
-    {
-      files: ["*.ts", "*.tsx"],
-      parserOptions: {
-        project: ["tsconfig.json"],
-      },
-    },
-  ],
 }
