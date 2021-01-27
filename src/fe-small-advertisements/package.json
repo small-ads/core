@@ -19,13 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --config ./.eslintrc.js"
   },
   "browserslist": {
     "production": [
@@ -38,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-small-ads": "1.0.0"
   }
 }
