@@ -24,12 +24,6 @@
     "build": "build-storybook -s public",
     "lint": "eslint '*/**/*.{ts,tsx}' --config ./.eslintrc.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
