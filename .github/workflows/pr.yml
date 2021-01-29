@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  lint:
 
     runs-on: ubuntu-latest
 
@@ -22,6 +22,6 @@ jobs:
     - name: Bootstrap
       run: npm run bootstrap  
 
-    - name: Lint types and code
+    - name: Lint
       run: npm run lint
       
