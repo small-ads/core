@@ -20,6 +20,7 @@ storiesOf('Button', module)
     </Button>
   ))
   .add('onClick handler', () => (
+    // eslint-disable-next-line no-alert
     <Button onClick={() => window && window.alert('Button Clicked!')}>
       Click me!
     </Button>
