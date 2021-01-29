@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Colors } from '../../Colors';
+import { colors } from '../../constants/colors';
 
 export const ButtonStyles = styled.div`
   button:disabled,
@@ -23,8 +23,8 @@ export const ButtonStyles = styled.div`
     text-decoration: none;
   }
   .primary {
-    color: ${Colors.white};
-    background-color: ${Colors.primary};
+    color: ${colors.white};
+    background-color: ${colors.primary};
     border: 0;
     i {
       font-size: 1.5em;
@@ -32,34 +32,34 @@ export const ButtonStyles = styled.div`
     &:hover {
       top: -4px;
       box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
-      background-color: ${Colors.active};
+      background-color: ${colors.active};
     }
     &:active {
-      background-color: ${Colors.active};
+      background-color: ${colors.active};
     }
     &:disabled {
       box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px 0px;
-      background-color: ${Colors.divider};
+      background-color: ${colors.divider};
     }
   }
   .secondary {
     box-sizing: border-box;
-    color: ${Colors.white};
-    border: 1px solid ${Colors.primary};
-    background-color: ${Colors.primary};
+    color: ${colors.white};
+    border: 1px solid ${colors.primary};
+    background-color: ${colors.primary};
     i {
       font-size: 1.4em;
     }
     &:hover,
     &:active {
-      color: ${Colors.primary};
-      background-color: ${Colors.white};
-      border: 1px solid ${Colors.primary};
+      color: ${colors.primary};
+      background-color: ${colors.white};
+      border: 1px solid ${colors.primary};
     }
     &:disabled {
-      color: ${Colors.white};
-      background-color: ${Colors.secondary};
-      border: 1px solid ${Colors.secondary};
+      color: ${colors.white};
+      background-color: ${colors.secondary};
+      border: 1px solid ${colors.secondary};
     }
   }
 `;
