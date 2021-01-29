@@ -2,32 +2,28 @@ import React from 'react';
 import { ButtonStyles } from './button.style';
 
 export interface ButtonProps {
-  type: 'primary' | 'secondary';
-  id: string;
-  htmlType: 'button' | 'submit' | 'reset' | undefined;
+  type?: 'primary' | 'secondary';
+  submit?: boolean;
+  disabled?: boolean;
+  style?: object;
+  className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  disabled: boolean | undefined;
-  style: object;
-  className: string;
   children: React.ReactNode;
 }
 
 export function Button({
-  type,
-  id,
-  htmlType,
-  onClick,
+  type = 'primary',
+  submit = false,
+  disabled = false,
+  style = {},
+  className = '',
   children,
-  disabled,
-  style,
-  className,
+  onClick,
 }: ButtonProps) {
   return (
     <ButtonStyles>
       <button
-        // eslint-disable-next-line react/button-has-type
-        type={htmlType}
-        id={id}
+        type={submit ? 'submit' : 'button'}
         disabled={disabled}
         onClick={onClick}
         className={`${className} ${type}`}
@@ -38,13 +34,3 @@ export function Button({
     </ButtonStyles>
   );
 }
-
-Button.defaultProps = {
-  id: null,
-  onClick: () => {},
-  type: 'primary',
-  htmlType: 'button',
-  style: {},
-  disabled: false,
-  className: '',
-};
