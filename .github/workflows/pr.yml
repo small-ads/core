@@ -19,6 +19,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
     
+    - name: Bootstrap
+      run: npm run bootstrap  
+
     - name: Lint types and code
       run: npm run lint
       
