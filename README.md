@@ -1,5 +1,5 @@
 # core
-an open source project that builds free small advertisments
+an open source project that builds free small advertisements
 
 ### tech
 
@@ -18,4 +18,4 @@ decided:
 still to choose: 
 * state-managements
 * linter with `prettier` and `eslint` `airbnb`
-* way to fetch data and trigger actions asynchronusly
+* way to fetch data and trigger actions asynchronously
