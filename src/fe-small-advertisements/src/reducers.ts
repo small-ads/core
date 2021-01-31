@@ -1,4 +1,4 @@
-import personReducer from '../features/person/personSlice';
+import { personReducer } from './person/personSlice';
 
 export const rootReducer = {
   person: personReducer,

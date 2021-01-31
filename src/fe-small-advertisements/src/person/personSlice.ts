@@ -11,4 +11,4 @@ const personSlice = createSlice({
 
 export const { setName } = personSlice.actions;
 
-export default personSlice.reducer;
+export const personReducer = personSlice.reducer;

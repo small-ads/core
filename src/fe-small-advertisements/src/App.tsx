@@ -1,14 +1,14 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './reducers';
-import { setName } from './features/person/personSlice';
+import { setName } from './person/personSlice';
 
 export const App = () => {
   const name = useSelector((state: RootState) => state.person);
   const dispatch = useDispatch();
   const [newName, setNewName] = useState('');
 
-  const handleUpdateTitle = (e: FormEvent<HTMLFormElement>): void => {
+  const handleNameUpdate = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (!newName.trim()) {
       return;
@@ -20,7 +20,7 @@ export const App = () => {
   return (
     <>
       <p>I am a person with the name: {name}</p>
-      <form onSubmit={handleUpdateTitle}>
+      <form onSubmit={handleNameUpdate}>
         <input
           value={newName}
           onChange={(e: ChangeEvent<HTMLInputElement>): void => {
