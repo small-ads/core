@@ -23,6 +23,7 @@ module.exports = {
   plugins: ['react-hooks', '@typescript-eslint/eslint-plugin'],
   rules: {
     'import/prefer-default-export': 'off',
+    'import/no-default-export': 'error',
   },
   settings: {
     'import/resolver': {
