@@ -3,7 +3,10 @@
   "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "lint": "lerna run lint"
+    "lint": "lerna run lint --parallel --stream",
+    "start:webapp": "lerna run --scope @small-ads/webapp start --stream",
+    "start:storybook": "lerna run --scope @small-ads/ui start --stream",
+    "start": "lerna run start --parallel --stream"
   },
   "devDependencies": {
     "lerna": "^3.22.1",
