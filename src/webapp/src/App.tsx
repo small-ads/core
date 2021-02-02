@@ -1,7 +1,8 @@
-import React, { ChangeEvent, FormEvent, useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './reducers';
 import { setName } from './person/personSlice';
+import { Characters } from './characters/Characters';
 
 export const App = () => {
   const name = useSelector((state: RootState) => state.person);
@@ -23,12 +24,13 @@ export const App = () => {
       <form onSubmit={handleNameUpdate}>
         <input
           value={newName}
-          onChange={(e: ChangeEvent<HTMLInputElement>): void => {
+          onChange={(e): void => {
             setNewName(e.target.value);
           }}
         />
-        <button type="submit">change name</button>
+        <button type='submit'>change name</button>
       </form>
+      <Characters />
     </>
   );
 };
