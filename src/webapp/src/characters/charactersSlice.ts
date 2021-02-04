@@ -47,10 +47,7 @@ const charactersSlice = createSlice({
     builder.addCase(getCharacters.pending, () => {});
 
     builder.addCase(getCharacters.rejected, (state, action) => {
-      if (action.payload) {
-        return { ...state, error: action.payload.error };
-      }
-      return { ...state, error: action.error.message };
+        return { ...state, error: action.payload?.error || action.error?.message  };
     });
 
     builder.addCase(getCharacters.fulfilled, (state, { payload }) => ({
