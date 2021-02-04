@@ -26,17 +26,17 @@ export const getCharacters = createAsyncThunk<
 >('characters/getCharacters', async (_, { rejectWithValue }) => {
   const response = await fetch("https://rickandmortyapi.com/api/character");
 
-  if (response.status === 404) {
-    return rejectWithValue((await response.json()) as ApiKnownError);
+  if (response.ok) {
+    const { results } = await response.json();
+    return results.map(({ species, image, id, name }: StateCharacter) => ({
+      species,
+      image,
+      id,
+      name,
+    }));
   }
-  const { results } = await response.json();
-
-  return results.map(({ species, image, id, name }: StateCharacter) => ({
-    species,
-    image,
-    id,
-    name,
-  }));
+  
+  return rejectWithValue((await response.json()) as ApiKnownError);
 });
 
 const charactersSlice = createSlice({
