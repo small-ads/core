@@ -1,15 +1,9 @@
 module.exports = {
-  extends: ['eslint-config-small-ads'],
-  rules: {
-    'import/no-extraneous-dependencies': 'off',
+  extends: ["eslint-config-small-ads"],
+  parserOptions: {
+    project: "./tsconfig.json",
   },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      parserOptions: {
-        project: ['tsconfig.json'],
-        tsconfigRootDir: __dirname,
-      },
-    },
-  ],
+  rules: {
+    "import/no-extraneous-dependencies": "off",
+  }
 };
