@@ -1,51 +1,26 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-interface ApiExtraInformation {
-  count: number;
-  pages: number;
-  next: string;
-  prev: string | null;
-}
-
-interface Character {
-  id: number;
-  name: string;
-  status: string;
-  species: string;
-  type: string;
-  gender: string;
-  origin: {
-    name: string;
-    url: string;
-  };
-  location: {
-    name: string;
-    url: string;
-  };
-  episode: string[];
-  url: string;
-  created: Date;
-  image: string;
-}
-
-export interface ApiData {
-  results: Character[];
-  info: ApiExtraInformation;
+interface StateData {
+  results: StateCharacter[];
   error?: string | null;
 }
 
-const initialState = {
-  results: [] as Character[],
-  info: {} as ApiExtraInformation,
-  error: null,
-} as ApiData;
-
+export interface StateCharacter {
+  id: number;
+  name: string;
+  species: string;
+  image: string;
+}
 interface ApiKnownError {
   error: string;
 }
+const initialState = {
+  results: [] as StateCharacter[],
+  error: null,
+} as StateData;
 
 export const getCharacters = createAsyncThunk<
-  ApiData,
+  StateCharacter[],
   void,
   { rejectValue: ApiKnownError }
 >('characters/getCharacters', async (_, { rejectWithValue }) => {
@@ -54,8 +29,14 @@ export const getCharacters = createAsyncThunk<
   if (response.status === 404) {
     return rejectWithValue((await response.json()) as ApiKnownError);
   }
+  const { results } = await response.json();
 
-  return (await response.json()) as ApiData;
+  return results.map(({ species, image, id, name }: StateCharacter) => ({
+    species,
+    image,
+    id,
+    name,
+  }));
 });
 
 const charactersSlice = createSlice({
@@ -74,8 +55,7 @@ const charactersSlice = createSlice({
 
     builder.addCase(getCharacters.fulfilled, (state, { payload }) => ({
       ...state,
-      results: payload.results,
-      info: payload.info,
+      results: payload,
     }));
   },
 });

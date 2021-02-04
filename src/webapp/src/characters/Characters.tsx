@@ -4,24 +4,13 @@ import { RootState } from '../reducers';
 import { getCharacters } from './charactersSlice';
 
 import './Characters.css';
+import { CharacterCard } from './CharacterCard';
 
 export const Characters = () => {
   const dispatch = useDispatch();
   const { results, error } = useSelector(
     (state: RootState) => state.characters
   );
-
-  const charactersGrid = results.map(({ name, species, image, id }) => (
-    <div key={id} className='card'>
-      <div className='picture-wrap'>
-        <img src={image} title={name} alt='character' />
-      </div>
-      <div className='card-footer'>
-        <h3 className='character-name'>{name}</h3>
-        <div>{species}</div>
-      </div>
-    </div>
-  ));
 
   return (
     <div>
@@ -32,7 +21,11 @@ export const Characters = () => {
       {error ? (
         <p>An error has ocurred: {error}. Try again please</p>
       ) : (
-        <div className='characters-grid'>{charactersGrid}</div>
+        <div className='characters-grid'>
+          {results.map((character) => (
+            <CharacterCard character={character} key={character.id} />
+          ))}
+        </div>
       )}
     </div>
   );
