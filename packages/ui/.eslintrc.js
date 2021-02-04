@@ -1,9 +1,9 @@
 module.exports = {
-  extends: ["eslint-config-small-ads"],
+  extends: ['eslint-config-small-ads'],
   parserOptions: {
-    project: "./tsconfig.json",
+    project: './tsconfig.json',
   },
   rules: {
-    "import/no-extraneous-dependencies": "off",
+    'import/no-extraneous-dependencies': 'off',
   }
 };

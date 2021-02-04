@@ -1,7 +1,7 @@
 module.exports = {
-  extends: ["eslint-config-small-ads"],
+  extends: ['eslint-config-small-ads'],
   parserOptions: {
-    project: "./tsconfig.json",
+    project: './tsconfig.json',
   },
   rules: {
     'no-param-reassign': ['error', { props: true, ignorePropertyModificationsFor: ['state'] }],
