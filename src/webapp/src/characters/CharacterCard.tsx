@@ -1,13 +1,12 @@
 import React from 'react';
-import { StateCharacter } from './charactersSlice';
 
 interface Props {
-  character: StateCharacter;
+  name: string;
+  species: string;
+  image: string;
 }
 
-export const CharacterCard = ({
-  character: { name, species, image },
-}: Props) => (
+export const CharacterCard = ({ name, species, image }: Props) => (
   <div className='card'>
     <div className='picture-wrap'>
       <img src={image} title={name} alt='character' />

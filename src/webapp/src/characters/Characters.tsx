@@ -22,8 +22,8 @@ export const Characters = () => {
         <p>An error has ocurred: {error}. Try again please</p>
       ) : (
         <div className='characters-grid'>
-          {results.map((character) => (
-            <CharacterCard character={character} key={character.id} />
+          {results.map(({image, id, name, species}) => (
+            <CharacterCard image={image} name={name} species={species} key={id} />
           ))}
         </div>
       )}
