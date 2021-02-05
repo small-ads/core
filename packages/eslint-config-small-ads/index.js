@@ -19,6 +19,7 @@ module.exports = {
     },
     ecmaVersion: 12,
     sourceType: 'module',
+    createDefaultProgram: true,
   },
   plugins: ['react-hooks', '@typescript-eslint/eslint-plugin'],
   rules: {
