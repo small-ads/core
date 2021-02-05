@@ -3,9 +3,7 @@ import { fetchCharacters } from './fetchCharacters';
 import { CharactersReducer } from './types';
 
 const initialState: CharactersReducer = {
-  characters: {
-    list: [],
-  },
+  list: [],
   error: null,
 };
 
@@ -23,9 +21,7 @@ const charactersSlice = createSlice({
 
     builder.addCase(fetchCharacters.fulfilled, (state, { payload }) => ({
       ...state,
-      characters: {
-        list: payload,
-      },
+      list: payload
     }));
   },
 });

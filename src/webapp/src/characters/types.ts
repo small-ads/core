@@ -2,10 +2,8 @@ export interface ApiKnownError {
   error: string;
 }
 export interface CharactersReducer {
+  list: Character[];
   error?: string | null;
-  characters: {
-    list: Character[];
-  };
 }
 
 export interface Character {

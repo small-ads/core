@@ -5,7 +5,7 @@ export const fetchCharacters = createAsyncThunk<
   Character[],
   void,
   { rejectValue: ApiKnownError }
->('characters/getCharacters', async (_, { rejectWithValue }) => {
+>('characters/fetchCharacters', async (_, { rejectWithValue }) => {
   const response = await fetch('https://rickandmortyapi.com/api/character');
 
   if (response.ok) {

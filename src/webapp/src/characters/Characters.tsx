@@ -8,10 +8,7 @@ import { CharacterCard } from './CharacterCard';
 
 export const Characters = () => {
   const dispatch = useDispatch();
-  const {
-    characters: { list },
-    error,
-  } = useSelector((state: RootState) => state.characters);
+  const { list, error } = useSelector((state: RootState) => state.characters);
 
   return (
     <div>
