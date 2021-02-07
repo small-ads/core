@@ -1,15 +1,18 @@
+<<<<<<< HEAD
 import React, { FormEvent, useState } from 'react';
 import { Button } from '@small-ads/ui';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './reducers';
 import { setName } from './person/personSlice';
+=======
+import React from 'react';
+>>>>>>> feat: :construction_worker: add Google autenthication with firebase
 import { Characters } from './characters/Characters';
 
-export const App = () => {
-  const name = useSelector((state: RootState) => state.person);
-  const dispatch = useDispatch();
-  const [newName, setNewName] = useState('');
+import { Person } from './person/Person';
+import { Auth } from './auth/Auth';
 
+<<<<<<< HEAD
   const handleNameUpdate = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (!newName.trim()) {
@@ -38,3 +41,12 @@ export const App = () => {
     </>
   );
 };
+=======
+export const App = () => (
+  <>
+    <Auth />
+    <Person />
+    <Characters />
+  </>
+);
+>>>>>>> feat: :construction_worker: add Google autenthication with firebase
