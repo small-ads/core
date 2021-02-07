@@ -1,10 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../reducers';
 import { fetchCharacters } from './fetchCharacters';
 
-import './Characters.css';
 import { CharacterCard } from './CharacterCard';
+
+const CharactersGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+`;
 
 export const Characters = () => {
   const dispatch = useDispatch();
@@ -19,7 +25,7 @@ export const Characters = () => {
       {error ? (
         <p>An error has ocurred: {error}. Try again please</p>
       ) : (
-        <div className='characters-grid'>
+        <CharactersGrid>
           {list.map(({ image, id, name, species }) => (
             <CharacterCard
               image={image}
@@ -28,7 +34,7 @@ export const Characters = () => {
               key={id}
             />
           ))}
-        </div>
+        </CharactersGrid>
       )}
     </div>
   );
