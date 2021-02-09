@@ -1,6 +1,11 @@
 {
   "name": "@small-ads/ui",
   "version": "0.1.0",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist"
+  ],
   "private": true,
   "dependencies": {
     "@storybook/addon-docs": "^6.1.14",
@@ -31,7 +36,9 @@
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
     "build": "build-storybook -s public",
-    "lint": "eslint '*/**/*.{ts,tsx}' --config ./.eslintrc.js"
+    "compile": "tsc -p tsconfig.build.json --emitDeclarationOnly",
+    "lint": "eslint '*/**/*.{ts,tsx}' --config ./.eslintrc.js",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
   },
   "browserslist": {
     "production": [

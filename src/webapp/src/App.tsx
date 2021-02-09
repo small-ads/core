@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
+import { Button } from '@small-ads/ui';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button } from '@small-ads/ui/src/components/Button/';
 import { RootState } from './reducers';
 import { setName } from './person/personSlice';
 import { Characters } from './characters/Characters';
