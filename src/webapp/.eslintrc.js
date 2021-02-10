@@ -10,4 +10,5 @@ module.exports = {
       { props: true, ignorePropertyModificationsFor: ['state'] },
     ],
   },
+  ignorePatterns: ["**/*/dist/*"],
 };
