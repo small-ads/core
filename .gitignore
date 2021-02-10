@@ -1,3 +1,22 @@
 .idea
 node_modules
 
+packages/*/dist
+packages/*/build
+packages/*/coverage
+packages/*/node_modules
+packages/*/.eslintcache
+packages/*/yarn-debug.log*
+packages/*/yarn-error.log*
+
+src/*/dist
+src/*/build
+src/*/coverage
+src/*/node_modules
+src/*/.eslintcache
+src/*/.env
+src/*/yarn-debug.log*
+src/*/yarn-error.log*
+
+
+
