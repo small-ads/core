@@ -1,6 +1,10 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "src/*"
+  ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "lint": "lerna run lint --parallel --stream",

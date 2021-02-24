@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from 'react';
+import { Button } from '@small-ads/ui';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from './reducers';
 import { setName } from './person/personSlice';
@@ -29,6 +30,9 @@ export const App = () => {
           }}
         />
         <button type='submit'>change name</button>
+          <Button onClick={() => {}} type="secondary">
+              Call to Action
+          </Button>
       </form>
       <Characters />
     </>

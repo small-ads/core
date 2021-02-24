@@ -1,6 +1,7 @@
 {
   "name": "eslint-config-small-ads",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "private": true,
   "description": "An application to add eslint-airbnb support, integrated with Typescript and Prettier",
   "main": "index.js",
   "scripts": {
@@ -22,6 +23,5 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3"
-  },
-  "devDependencies": {}
+  }
 }
