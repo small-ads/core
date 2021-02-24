@@ -16,7 +16,4 @@ jobs:
           node-version: '15.x'
 
       - name: Install dependencies
-        run: yarn install
-
-      - name: Lint
-        run: yarn lint
+        run: yarn install --prod
