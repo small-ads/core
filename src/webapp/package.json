@@ -28,7 +28,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --config ./.eslintrc.js"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --config ./.eslintrc.js",
+    "typecheck": "tsc"
   },
   "browserslist": {
     "production": [
