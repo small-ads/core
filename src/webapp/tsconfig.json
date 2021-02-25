@@ -19,7 +19,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": ["@types/jest"],
+    "types": ["@types/jest", "@small-ads/ui"],
     "typeRoots": [
       "./types",
       "./node_modules/@types"
