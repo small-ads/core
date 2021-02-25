@@ -30,9 +30,9 @@ export const App = () => {
           }}
         />
         <button type='submit'>change name</button>
-          <Button onClick={() => {}} type="secondary">
-              Call to Action
-          </Button>
+        <Button onClick={() => {}} type='secondary'>
+          Call to Action
+        </Button>
       </form>
       <Characters />
     </>
