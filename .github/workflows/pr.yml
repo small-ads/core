@@ -23,9 +23,10 @@ jobs:
 
       - name: Install
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: |
-         yarn install
-         yarn build:package
+        run: yarn install
+
+      - name: Build
+        run: yarn build:packages
 
       - name: Lint
         run: yarn lint
