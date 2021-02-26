@@ -18,8 +18,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
-    "types": [],
+    "jsx": "react-jsx",
+    "types": ["@types/jest", "@small-ads/ui"],
     "typeRoots": [
       "./types",
       "./node_modules/@types"

@@ -36,8 +36,9 @@
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
     "build": "build-storybook -s public",
-    "build:js": "tsc -p tsconfig.build.json",
-    "lint": "eslint '*/**/*.{ts,tsx}' --config ./.eslintrc.js"
+    "build:package": "tsc -p tsconfig.build.json",
+    "lint": "eslint '*/**/*.{ts,tsx}' --config ./.eslintrc.js",
+    "typecheck": "tsc"
   },
   "browserslist": {
     "production": [

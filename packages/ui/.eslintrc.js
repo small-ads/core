@@ -4,6 +4,7 @@ module.exports = {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
+  ignorePatterns: ['dist/**/*'],
   rules: {
     'import/no-extraneous-dependencies': 'off',
   },
