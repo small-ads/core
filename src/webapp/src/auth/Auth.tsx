@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
-import { AuthStatuses } from './userSlice';
+import { AuthStatuses } from './types';
 import { RootState } from '../reducers';
-import { signInUser, signOutUser } from './asyncActionsCreators';
+import { signInUser, signOutUser } from './asyncAuthActions';
 
 const Loader = styled.div`
   border: 12px solid #f3f3f3;
