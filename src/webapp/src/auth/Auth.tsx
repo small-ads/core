@@ -47,8 +47,8 @@ export const Auth = () => {
     <div>
       {authStatus === AuthStatuses.loggedIn ? (
         <p>
-          Welcome: {user?.displayName} your id is ${user?.uid} and you are using
-          the following email: ${user?.email}
+          Welcome: {user?.displayName} your id is {user?.uid} and you are using
+          the following email: {user?.email}
         </p>
       ) : (
         <p>Hello there, login please</p>
