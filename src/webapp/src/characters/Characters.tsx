@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../reducers';
@@ -19,9 +20,9 @@ export const Characters = () => {
   return (
     <div>
       <h1>Characters</h1>
-      <button type='button' onClick={() => dispatch(fetchCharacters())}>
+      <Button type='primary' onClick={() => dispatch(fetchCharacters())}>
         fetch
-      </button>
+      </Button>
       {error ? (
         <p>An error has ocurred: {error}. Try again please</p>
       ) : (
