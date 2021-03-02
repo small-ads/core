@@ -11,6 +11,7 @@
     "start:storybook": "lerna run --scope @small-ads/ui start --stream",
     "start": "lerna run start --parallel --stream",
     "typecheck": "lerna run typecheck --parallel --stream",
+    "prebuild": "yarn build:package",
     "build": "lerna run build --stream",
     "build:package": "lerna run --scope @small-ads/ui build:package --stream"
   },

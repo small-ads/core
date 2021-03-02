@@ -35,7 +35,6 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
-    "prebuild": "npm run build:package",
     "build": "build-storybook -s public",
     "build:package": "tsc -p tsconfig.build.json",
     "lint": "eslint '*/**/*.{ts,tsx}' --config ./.eslintrc.js",
