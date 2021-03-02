@@ -18,5 +18,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           build: |
             yarn
-            REACT_APP_FIREBASE_KEY=${{ secrets.REACT_APP_FIREBASE_KEY }} yarn build
+            yarn build
+          env:
+            REACT_APP_FIREBASE_KEY: ${{ secrets.REACT_APP_FIREBASE_KEY }}
           dist: 'src/webapp/build'
