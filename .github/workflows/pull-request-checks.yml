@@ -1,11 +1,11 @@
-name: PR Workflow
+name: Pull request
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  lint:
+  build-lint-typecheck:
     runs-on: ubuntu-latest
 
     steps:
