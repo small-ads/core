@@ -25,9 +25,13 @@ const Loader = styled.div`
 
 export const Auth = () => {
   const dispatch = useDispatch();
-  const { authStatus, user, error } = useSelector(
+  const { authStatus, uid, displayName, email, error } = useSelector(
     (state: RootState) => state.user
   );
+
+  const handleSignIn = () => {
+    dispatch(signInUser());
+  };
 
   const handleLogout = () => {
     dispatch(signOutUser());
@@ -47,16 +51,16 @@ export const Auth = () => {
     <div>
       {authStatus === AuthStatuses.loggedIn ? (
         <p>
-          Welcome: {user?.displayName} your id is {user?.uid} and you are using
-          the following email: {user?.email}
+          Welcome: {displayName} your id is {uid} and you are using the
+          following email: {email}
         </p>
       ) : (
         <p>Hello there, login please</p>
       )}
-      <button type='button' onClick={() => dispatch(signInUser())}>
+      <button type='button' onClick={handleSignIn}>
         LogIn
       </button>
-      <button type='button' onClick={() => handleLogout()}>
+      <button type='button' onClick={handleLogout}>
         LogOut
       </button>
     </div>

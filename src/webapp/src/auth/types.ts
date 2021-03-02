@@ -1,8 +1,9 @@
-export interface User {
+export interface UserData {
   uid: string;
   email: string | null;
   displayName: string | null;
 }
+
 export enum AuthStatuses {
   notLoggedIn,
   loggedIn,
@@ -10,7 +11,9 @@ export enum AuthStatuses {
 }
 
 export interface Login {
-  user: User | null;
+  uid: string | undefined;
+  email: string | undefined;
+  displayName: string | undefined;
   error?: string | null;
   authStatus: AuthStatuses;
 }

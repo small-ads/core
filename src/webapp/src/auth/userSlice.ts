@@ -3,7 +3,9 @@ import { AuthStatuses, Login } from './types';
 import { signInUser, signOutUser } from './asyncAuthActions';
 
 const initialState: Login = {
-  user: null,
+  uid: undefined,
+  displayName: undefined,
+  email: undefined,
   error: null,
   authStatus: AuthStatuses.notLoggedIn,
 };
@@ -20,7 +22,10 @@ export const userSlice = createSlice({
       state.authStatus = AuthStatuses.notLoggedIn;
     });
     builder.addCase(signInUser.fulfilled, (state, { payload }) => {
-      state.user = payload;
+      const { uid, displayName, email } = payload;
+      state.uid = uid;
+      state.displayName = displayName!;
+      state.email = email!;
       state.authStatus = AuthStatuses.loggedIn;
     });
     builder.addCase(signOutUser.pending, (state) => {
@@ -30,7 +35,9 @@ export const userSlice = createSlice({
       state.error = action.error?.message;
     });
     builder.addCase(signOutUser.fulfilled, (state) => {
-      state.user = null;
+      state.uid = undefined;
+      state.displayName = undefined;
+      state.email = undefined;
       state.authStatus = AuthStatuses.notLoggedIn;
     });
   },
