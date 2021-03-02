@@ -45,7 +45,6 @@ export const ButtonStyles = styled.div`
     }
   }
   .secondary {
-    box-sizing: border-box;
     color: ${colors.secondary};
     border: 1px solid ${colors.accents2};
     background-color: ${colors.white};
