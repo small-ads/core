@@ -9,7 +9,10 @@ export const App = () => (
     <Auth />
     <Person />
     <Button onClick={() => {}} type='secondary'>
-      Call to Action
+      Invite Team
+    </Button>
+    <Button onClick={() => {}} type='primary'>
+      New Project
     </Button>
     <Characters />
   </>
