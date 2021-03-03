@@ -16,7 +16,6 @@ jobs:
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          REACT_APP_FIREBASE_KEY: ${{ secrets.REACT_APP_FIREBASE_KEY }}
           build: |
             yarn
             REACT_APP_FIREBASE_KEY=${{ secrets.REACT_APP_FIREBASE_KEY }} yarn build
