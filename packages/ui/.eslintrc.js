@@ -7,5 +7,7 @@ module.exports = {
   ignorePatterns: ['dist/**/*'],
   rules: {
     'import/no-extraneous-dependencies': 'off',
+    'import/no-default-export': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };
