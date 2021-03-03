@@ -10,12 +10,7 @@ storiesOf('Button', module)
     </Button>
   ))
   .add('secondary', () => (
-    <Button onClick={() => {}} type="secondary">
-      Call to Action
-    </Button>
-  ))
-  .add('secondary disabled', () => (
-    <Button onClick={() => {}} disabled type="secondary">
+    <Button onClick={() => {}} type='secondary'>
       Call to Action
     </Button>
   ))
