@@ -17,6 +17,7 @@ export const ButtonStyles = styled.div`
     justify-content: center;
     font-size: 14px;
     font-weight: 500;
+    font-family: inherit;
     text-decoration: none;
     line-height: 38px;
     white-space: nowrap;
