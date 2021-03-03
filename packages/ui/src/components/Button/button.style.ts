@@ -15,10 +15,10 @@ export const ButtonStyles = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    line-height: 3.8rem;
+    line-height: 38px;
     white-space: nowrap;
     padding: 0px 25px;
     border-radius: 5px;
