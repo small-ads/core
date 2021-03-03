@@ -6,7 +6,6 @@ export const ButtonStyles = styled.div`
   button:disabled .component-child {
     cursor: not-allowed !important;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700&display=swap');
 
   button {
     height: 40px;
@@ -16,12 +15,10 @@ export const ButtonStyles = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
-    font-family: 'Inter', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-      Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-decoration: none;
-    line-height: 38px;
+    line-height: 3.8rem;
     white-space: nowrap;
     padding: 0px 25px;
     border-radius: 5px;
