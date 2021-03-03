@@ -4,19 +4,27 @@ on:
   pull_request:
     branches:
     paths:
-      - 'src/webapp/**'
-      - '.github/workflows/preview-webapp.yml'
+      - "src/webapp/**"
+      - ".github/workflows/preview-webapp.yml"
 
 jobs:
-  webapp:
+  build_and_preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: afc163/surge-preview@v1
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
         with:
-          surge_token: ${{ secrets.SURGE_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          build: |
-            yarn
-            REACT_APP_FIREBASE_KEY=${{ secrets.REACT_APP_FIREBASE_KEY }} yarn build
-          dist: 'src/webapp/build'
+          node-version: "15.x"
+
+      - name: Builds
+        run: yarn && yarn build
+
+      - name: Deploys
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          expires: 30d
+          projectId: small-ads-39e36
