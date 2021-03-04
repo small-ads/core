@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "lint": "lerna run lint --parallel --stream",
-    "start:webapp": "lerna run --scope @small-ads/webapp start --stream",
+    "start:webapp": "yarn build:package && lerna run --scope @small-ads/webapp start --stream",
     "start:storybook": "lerna run --scope @small-ads/ui start --stream",
     "start": "lerna run start --parallel --stream",
     "typecheck": "lerna run typecheck --parallel --stream",
