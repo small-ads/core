@@ -22,7 +22,7 @@ export const App = () => (
           Invite Team
         </Button>
         <Button onClick={() => {}} type='primary'>
-          New Project
+          New
         </Button>
         <Characters />
       </Route>
