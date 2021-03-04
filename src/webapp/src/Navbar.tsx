@@ -34,7 +34,7 @@ export const Navbar = () => {
             history.push('/login');
           }}
         >
-          Login
+          Login Test
         </Button>
       </Header>
     </HeaderStyles>
