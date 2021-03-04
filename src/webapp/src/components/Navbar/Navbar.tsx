@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useRouteMatch } from 'react-router-dom';
 
 const HeaderStyles = styled.div`
   position: sticky;
@@ -25,10 +25,12 @@ const Header = styled.div`
 
 export const Navbar = () => {
   const history = useHistory();
+  const route = useRouteMatch('/login');
   return (
     <HeaderStyles>
       <Header>
         <Button
+          disabled={!!route?.isExact}
           size='medium'
           onClick={() => {
             history.push('/login');
