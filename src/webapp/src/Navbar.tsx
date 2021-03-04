@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
 
-const HeaderWrapper = styled.div`
+const HeaderStyles = styled.div`
   position: sticky;
   top: 0;
   display: flex;
@@ -21,11 +21,11 @@ const Header = styled.div`
 `;
 
 export const Navbar = () => (
-  <HeaderWrapper>
+  <HeaderStyles>
     <Header>
       <Button size='medium' onClick={() => {}}>
         Login
       </Button>
     </Header>
-  </HeaderWrapper>
+  </HeaderStyles>
 );
