@@ -65,4 +65,15 @@ export const ButtonStyles = styled.div`
     line-height: 0;
     font-size: 0.875rem;
   }
+  .facebook {
+    background-color: #1877f2;
+    border: 1px solid #1877f2;
+    color: ${colors.white};
+    width: 100%;
+    &:hover {
+      color: ${colors.white};
+      background-color: #166fe5;
+      border: 1px solid #166fe5;
+    }
+  }
 `;

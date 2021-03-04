@@ -30,7 +30,7 @@ export const Navbar = () => {
     <HeaderStyles>
       <Header>
         <Button
-          disabled={!!route?.isExact}
+          disabled={Boolean(route?.isExact)}
           size='medium'
           onClick={() => {
             history.push('/login');

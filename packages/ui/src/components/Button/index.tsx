@@ -10,6 +10,7 @@ export interface ButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
   size?: 'small' | 'medium';
+  social?: 'facebook';
 }
 
 export function Button({
@@ -21,6 +22,7 @@ export function Button({
   children,
   onClick,
   size,
+  social,
 }: ButtonProps) {
   return (
     <ButtonStyles>
@@ -28,7 +30,7 @@ export function Button({
         type={submit ? 'submit' : 'button'}
         disabled={disabled}
         onClick={onClick}
-        className={`${className} ${type} ${size}`}
+        className={`${className} ${type} ${size} ${social}`}
         style={style}
       >
         {children}
