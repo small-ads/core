@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 
 const HeaderStyles = styled.div`
   position: sticky;
@@ -20,12 +21,20 @@ const Header = styled.div`
   margin: 13.5px auto;
 `;
 
-export const Navbar = () => (
-  <HeaderStyles>
-    <Header>
-      <Button size='medium' onClick={() => {}}>
-        Login
-      </Button>
-    </Header>
-  </HeaderStyles>
-);
+export const Navbar = () => {
+  const history = useHistory();
+  return (
+    <HeaderStyles>
+      <Header>
+        <Button
+          size='medium'
+          onClick={() => {
+            history.push('/login');
+          }}
+        >
+          Login
+        </Button>
+      </Header>
+    </HeaderStyles>
+  );
+};
