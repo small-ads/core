@@ -1,7 +1,7 @@
 import React from 'react';
 import { GlobalStyle } from '@small-ads/ui';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Navbar } from './Navbar';
+import { Navbar } from './components/Navbar/Navbar';
 import { Login } from './auth/Login';
 import { Auth } from './auth/Auth';
 
