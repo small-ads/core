@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Login = () => (
+export const AuthenticationOptions = () => (
   <div>
     <h1>Login here</h1>
   </div>

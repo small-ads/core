@@ -2,7 +2,7 @@ import React from 'react';
 import { GlobalStyle } from '@small-ads/ui';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
-import { Login } from './auth/Login';
+import { AuthenticationOptions } from './auth/AuthenticationOptions';
 import { Auth } from './auth/Auth';
 
 export const App = () => (
@@ -11,7 +11,7 @@ export const App = () => (
       <GlobalStyle />
       <Navbar />
       <Switch>
-        <Route path='/login' component={Login} />
+        <Route path='/login' component={AuthenticationOptions} />
         <Route exact path='/' component={Auth} />
       </Switch>
     </Router>
