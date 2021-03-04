@@ -9,7 +9,7 @@ export interface ButtonProps {
   className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
-  size: 'small' | 'medium';
+  size?: 'small' | 'medium';
 }
 
 export function Button({
