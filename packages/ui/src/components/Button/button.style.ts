@@ -9,7 +9,6 @@ export const ButtonStyles = styled.div`
 
   button {
     height: 40px;
-    width: 140px;
     min-width: auto;
     max-width: calc(50vw - 36px);
     display: inline-flex;
@@ -52,5 +51,17 @@ export const ButtonStyles = styled.div`
       background-color: ${colors.white};
       border: 1px solid ${colors.primary};
     }
+  }
+  .small {
+    min-width: auto;
+    height: 24px;
+    line-height: 22px;
+    padding: 0px 10px;
+  }
+  .medium {
+    padding: 6px 12px;
+    min-width: 70px;
+    line-height: 0;
+    font-size: 0.875rem;
   }
 `;

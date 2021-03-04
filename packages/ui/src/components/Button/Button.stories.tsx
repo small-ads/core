@@ -11,6 +11,12 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 Secondary.args = { type: 'secondary' };
 
+export const Medium = Template.bind({});
+Medium.args = { size: 'medium' };
+
+export const Small = Template.bind({});
+Small.args = { size: 'small' };
+
 export const Styled = Template.bind({});
 Styled.args = {
   style: {
