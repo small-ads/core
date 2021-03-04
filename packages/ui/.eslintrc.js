@@ -4,10 +4,8 @@ module.exports = {
     project: './tsconfig.json',
     tsconfigRootDir: __dirname,
   },
-  ignorePatterns: ['dist/**/*'],
+  ignorePatterns: ['dist/**/*', '*.stories.tsx'],
   rules: {
     'import/no-extraneous-dependencies': 'off',
-    'import/no-default-export': 'off',
-    'react/jsx-props-no-spreading': 'off',
   },
 };
