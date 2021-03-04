@@ -10,6 +10,8 @@ const HeaderStyles = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 100%;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+  min-height: 64px;
 `;
 
 const Header = styled.div`
