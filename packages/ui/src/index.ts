@@ -1,2 +1,2 @@
 export * from './components/Button';
-export * from './GlobalStyle/global.style';
+export * from './components/GlobalStyle';
