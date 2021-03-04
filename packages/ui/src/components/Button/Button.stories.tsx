@@ -11,11 +11,17 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 Secondary.args = { type: 'secondary' };
 
-export const Medium = Template.bind({});
-Medium.args = { size: 'medium' };
+export const MediumPrimary = Template.bind({});
+MediumPrimary.args = { size: 'medium' };
 
-export const Small = Template.bind({});
-Small.args = { size: 'small' };
+export const SmallPrimary = Template.bind({});
+SmallPrimary.args = { size: 'small' };
+
+export const MediumSecondary = Template.bind({});
+MediumSecondary.args = { type: 'secondary', size: 'medium' };
+
+export const SmallSecondary = Template.bind({});
+SmallSecondary.args = { type: 'secondary', size: 'small' };
 
 export const Styled = Template.bind({});
 Styled.args = {
