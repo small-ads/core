@@ -59,6 +59,7 @@ export const ButtonStyles = styled.div`
     padding: 0px 10px;
   }
   .medium {
+    height: 32px;
     padding: 6px 12px;
     min-width: 70px;
     line-height: 0;
