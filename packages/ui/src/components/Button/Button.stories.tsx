@@ -9,7 +9,7 @@ const Template: Story<ButtonProps> = (args) => (
 export const Primary = Template.bind({});
 
 export const Secondary = Template.bind({});
-Primary.args = { type: 'secondary' };
+Secondary.args = { type: 'secondary' };
 
 export const Styled = Template.bind({});
 Styled.args = {
