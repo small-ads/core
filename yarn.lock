@@ -1534,7 +1534,7 @@
     faye-websocket "0.11.3"
     tslib "^1.11.1"
 
-"@firebase/firestore-types@2.1.0", "@firebase/firestore-types@^2.1.0":
+"@firebase/firestore-types@2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@firebase/firestore-types/-/firestore-types-2.1.0.tgz#ad406c6fd7f0eae7ea52979f712daa0166aef665"
   integrity sha512-jietErBWihMvJkqqEquQy5GgoEwzHnMXXC/TsVoe9FPysXm1/AeJS12taS7ZYvenAtyvL/AEJyKrRKRh4adcJQ==
@@ -3009,7 +3009,7 @@
     core-js "^3.0.1"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-docs@6.1.17", "@storybook/addon-docs@^6.1.14":
+"@storybook/addon-docs@6.1.17":
   version "6.1.17"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-6.1.17.tgz#bb9d12d6d8da399e5c69c3552ce54eca17fe770d"
   integrity sha512-Y+IOR9tc1l4uPk+eZkhUAxjc6Xo82Jf0ERKWOKBdy4bDm34pRdpn4zAfMYuv9D8M0F/O1kUGhMlaHgE9a7YvNw==
