@@ -20,5 +20,4 @@ src/*/.env
 src/*/yarn-debug.log*
 src/*/yarn-error.log*
 
-
-
+.vercel

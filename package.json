@@ -12,6 +12,7 @@
     "start": "lerna run start --parallel --stream",
     "typecheck": "lerna run typecheck --parallel --stream",
     "build:storybook": "lerna run --scope @small-ads/ui build --stream",
+    "build:webapp": "yarn build:package && lerna run --scope @small-ads/webapp build --stream",
     "build:package": "lerna run --scope @small-ads/ui build:package --stream"
   },
   "devDependencies": {
