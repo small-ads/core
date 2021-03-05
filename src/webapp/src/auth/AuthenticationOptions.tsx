@@ -35,7 +35,7 @@ export const AuthenticationOptions = () => (
     <LoginMain>
       <LoginSign>Login to small-ads</LoginSign>
       <LoginForm>
-        <Button social='facebook' onClick={() => {}}>
+        <Button full onClick={() => {}}>
           Continue with Facebook
         </Button>
       </LoginForm>
