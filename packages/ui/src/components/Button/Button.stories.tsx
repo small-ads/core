@@ -23,8 +23,8 @@ MediumSecondary.args = { type: 'secondary', size: 'medium' };
 export const SmallSecondary = Template.bind({});
 SmallSecondary.args = { type: 'secondary', size: 'small' };
 
-export const Facebook = Template.bind({});
-Facebook.args = { social: 'facebook' };
+export const FullWidth = Template.bind({});
+FullWidth.args = { full: true };
 
 export const Styled = Template.bind({});
 Styled.args = {
