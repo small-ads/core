@@ -12,20 +12,20 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 Secondary.args = { type: 'secondary' };
 
-export const MediumPrimary = Template.bind({});
-MediumPrimary.args = { size: 'medium' };
-
 export const SmallPrimary = Template.bind({});
 SmallPrimary.args = { size: 'small' };
 
-export const MediumSecondary = Template.bind({});
-MediumSecondary.args = { type: 'secondary', size: 'medium' };
+export const MediumPrimary = Template.bind({});
+MediumPrimary.args = { size: 'medium' };
+
+export const LargePrimary = Template.bind({});
+LargePrimary.args = { size: 'large' };
 
 export const SmallSecondary = Template.bind({});
 SmallSecondary.args = { type: 'secondary', size: 'small' };
 
-export const LargePrimary = Template.bind({});
-LargePrimary.args = { size: 'large' };
+export const MediumSecondary = Template.bind({});
+MediumSecondary.args = { type: 'secondary', size: 'medium' };
 
 export const LargeSecondary = Template.bind({});
 LargeSecondary.args = { type: 'secondary', size: 'large' };
