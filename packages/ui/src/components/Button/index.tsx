@@ -36,7 +36,7 @@ export function Button({
         className={`${className} ${type} ${size} ${block}`}
         style={style}
       >
-        <span>{icon}</span>
+        {icon && <span>{icon}</span>}
         {children}
       </button>
     </ButtonStyles>

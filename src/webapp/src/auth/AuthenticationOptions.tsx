@@ -1,5 +1,5 @@
-import { Button } from '@small-ads/ui';
 import React from 'react';
+import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
 import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 
@@ -31,7 +31,7 @@ const LoginButtons = styled.div`
   align-self: center;
 `;
 
-const GeistSpacer = styled.span`
+const GhostSpacer = styled.span`
   margin-left: 24px;
   margin-top: 24px;
 `;
@@ -54,7 +54,7 @@ export const AuthenticationOptions = () => (
     <LoginStyles>
       <LoginSign>Login to Small-ads</LoginSign>
       <LoginButtons>
-        <GeistSpacer aria-hidden='true' />
+        <GhostSpacer aria-hidden='true' />
         <FacebookButton
           size='large'
           icon={<Facebook size={20} />}
