@@ -1,15 +1,16 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button, ButtonProps } from '.';
+import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare';
 
 const Template: Story<ButtonProps> = (args) => (
   <Button {...args}>Call to action</Button>
 );
 
-export const Primary = Template.bind({});
+export const PrimaryLarge = Template.bind({});
 
-export const Secondary = Template.bind({});
-Secondary.args = { type: 'secondary' };
+export const SecondaryLarge = Template.bind({});
+SecondaryLarge.args = { type: 'secondary' };
 
 export const MediumPrimary = Template.bind({});
 MediumPrimary.args = { size: 'medium' };
@@ -22,6 +23,9 @@ MediumSecondary.args = { type: 'secondary', size: 'medium' };
 
 export const SmallSecondary = Template.bind({});
 SmallSecondary.args = { type: 'secondary', size: 'small' };
+
+export const WithIcon = Template.bind({});
+WithIcon.args = { icon: <FacebookSquare size={20} /> };
 
 export const FullWidth = Template.bind({});
 FullWidth.args = { full: true };
