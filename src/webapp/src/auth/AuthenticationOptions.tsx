@@ -36,7 +36,7 @@ const GeistSpacer = styled.span`
   margin-top: 23px;
 `;
 
-const FbButton = styled(Button)`
+const FacebookButton = styled(Button)`
   &&& {
     width: 320px;
     background-color: #1877f2;
@@ -55,13 +55,13 @@ export const AuthenticationOptions = () => (
       <LoginSign>Login to Vercel</LoginSign>
       <LoginForm>
         <GeistSpacer aria-hidden='true' />
-        <FbButton
+        <FacebookButton
           size='large'
           icon={<FacebookSquare size={20} />}
           onClick={() => {}}
         >
           Login with Facebook
-        </FbButton>
+        </FacebookButton>
       </LoginForm>
     </LoginMain>
   </LoginScreen>
