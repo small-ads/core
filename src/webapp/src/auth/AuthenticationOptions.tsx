@@ -53,7 +53,7 @@ const FacebookButton = styled(Button)`
 export const AuthenticationOptions = () => (
   <LoginScreenStyles>
     <LoginStyles>
-      <LoginSign>Login to Small-ads</LoginSign>
+      <LoginSign>Login to upload your ads</LoginSign>
       <LoginButtons>
         <GhostSpacer aria-hidden='true' />
         <FacebookButton
