@@ -19,7 +19,7 @@ const LoginMain = styled.div`
 `;
 
 const LoginSign = styled.div`
-  font-size: 3rem;
+  font-size: 48px;
   letter-spacing: -0.066875rem;
   font-weight: 700;
 `;
@@ -32,8 +32,8 @@ const LoginForm = styled.div`
 `;
 
 const GeistSpacer = styled.span`
-  margin-left: 23px;
-  margin-top: 23px;
+  margin-left: 24px;
+  margin-top: 24px;
 `;
 
 const FacebookButton = styled(Button)`
@@ -52,7 +52,7 @@ const FacebookButton = styled(Button)`
 export const AuthenticationOptions = () => (
   <LoginScreen>
     <LoginMain>
-      <LoginSign>Login to Vercel</LoginSign>
+      <LoginSign>Login to Small-ads</LoginSign>
       <LoginForm>
         <GeistSpacer aria-hidden='true' />
         <FacebookButton
