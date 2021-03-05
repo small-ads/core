@@ -24,13 +24,14 @@ export function Button({
   size = 'large',
   full = false,
 }: ButtonProps) {
+  const block = full ? 'block' : '';
   return (
     <ButtonStyles>
       <button
         type={submit ? 'submit' : 'button'}
         disabled={disabled}
         onClick={onClick}
-        className={`${className} ${type} ${size} ${full ? 'full' : ''}`}
+        className={`${className} ${type} ${size} ${block}`}
         style={style}
       >
         {children}

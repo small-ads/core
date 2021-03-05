@@ -67,7 +67,7 @@ export const ButtonStyles = styled.div`
     line-height: 38px;
     padding: 0px 25px;
   }
-  .full {
+  .block {
     width: 100%;
   }
 `;
