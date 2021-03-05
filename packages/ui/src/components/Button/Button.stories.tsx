@@ -4,7 +4,10 @@ import { Button, ButtonProps } from '.';
 import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare';
 
 const Template: Story<ButtonProps> = (args) => (
-  <Button {...args}>Call to action</Button>
+  <Button {...args}>
+    Call to action to see what happens when we have a very, very long text as
+    the text of our buttons, buttons, buttons
+  </Button>
 );
 
 export const Primary = Template.bind({});
@@ -35,11 +38,11 @@ WithIcon.args = {
   icon: <FacebookSquare size={20} />,
   size: 'large',
   style: {
-    width: '320px',
     backgroundColor: '#1877f2',
     border: '1px solid #1877f2',
     color: 'white',
   },
+  fullWidth: true,
 };
 
 export const FullWidth = Template.bind({});
