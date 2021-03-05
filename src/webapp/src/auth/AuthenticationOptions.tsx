@@ -2,12 +2,13 @@ import React from 'react';
 import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
 import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
+import { navbarConstants } from '../components/Navbar';
 
 const LoginScreenStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 64px);
+  height: calc(100vh - ${navbarConstants.height});
 `;
 
 const LoginStyles = styled.div`
