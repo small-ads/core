@@ -1,6 +1,7 @@
 import { Button } from '@small-ads/ui';
 import React from 'react';
 import styled from 'styled-components';
+import { FacebookSquare } from '@styled-icons/boxicons-logos';
 
 const LoginScreen = styled.div`
   display: flex;
@@ -35,7 +36,7 @@ export const AuthenticationOptions = () => (
     <LoginMain>
       <LoginSign>Login to small-ads</LoginSign>
       <LoginForm>
-        <Button full onClick={() => {}}>
+        <Button icon={<FacebookSquare size={20} />} full onClick={() => {}}>
           Continue with Facebook
         </Button>
       </LoginForm>

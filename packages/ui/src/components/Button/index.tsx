@@ -11,6 +11,7 @@ export interface ButtonProps {
   children: React.ReactNode;
   size?: 'small' | 'medium' | 'large';
   full?: boolean;
+  icon?: React.RefAttributes<SVGSVGElement>;
 }
 
 export function Button({
@@ -23,6 +24,7 @@ export function Button({
   onClick,
   size = 'large',
   full = false,
+  icon,
 }: ButtonProps) {
   const block = full ? 'block' : '';
   return (
@@ -34,6 +36,7 @@ export function Button({
         className={`${className} ${type} ${size} ${block}`}
         style={style}
       >
+        {icon}
         {children}
       </button>
     </ButtonStyles>
