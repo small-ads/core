@@ -7,10 +7,10 @@ const Template: Story<ButtonProps> = (args) => (
   <Button {...args}>Call to action</Button>
 );
 
-export const PrimaryLarge = Template.bind({});
+export const Primary = Template.bind({});
 
-export const SecondaryLarge = Template.bind({});
-SecondaryLarge.args = { type: 'secondary' };
+export const Secondary = Template.bind({});
+Secondary.args = { type: 'secondary' };
 
 export const MediumPrimary = Template.bind({});
 MediumPrimary.args = { size: 'medium' };
@@ -24,8 +24,20 @@ MediumSecondary.args = { type: 'secondary', size: 'medium' };
 export const SmallSecondary = Template.bind({});
 SmallSecondary.args = { type: 'secondary', size: 'small' };
 
+export const LargePrimary = Template.bind({});
+LargePrimary.args = { size: 'large' };
+
+export const LargeSecondary = Template.bind({});
+LargeSecondary.args = { type: 'secondary', size: 'large' };
+
 export const WithIcon = Template.bind({});
-WithIcon.args = { icon: <FacebookSquare size={20} /> };
+WithIcon.args = {
+  icon: <FacebookSquare size={20} />,
+  size: 'large',
+  style: {
+    width: '320px',
+  },
+};
 
 export const FullWidth = Template.bind({});
 FullWidth.args = { full: true };

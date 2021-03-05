@@ -34,7 +34,7 @@ const LoginForm = styled.div`
 export const AuthenticationOptions = () => (
   <LoginScreen>
     <LoginMain>
-      <LoginSign>Login to small-ads</LoginSign>
+      <LoginSign>Login to Vercel</LoginSign>
       <LoginForm>
         <Button icon={<FacebookSquare size={20} />} full onClick={() => {}}>
           Continue with Facebook

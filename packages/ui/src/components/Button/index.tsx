@@ -9,7 +9,7 @@ export interface ButtonProps {
   className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | '';
   full?: boolean;
   icon?: React.RefAttributes<SVGSVGElement>;
 }
@@ -22,7 +22,7 @@ export function Button({
   className = '',
   children,
   onClick,
-  size = 'large',
+  size = '',
   full = false,
   icon,
 }: ButtonProps) {
@@ -36,7 +36,7 @@ export function Button({
         className={`${className} ${type} ${size} ${block}`}
         style={style}
       >
-        {icon}
+        <span>{icon}</span>
         {children}
       </button>
     </ButtonStyles>
