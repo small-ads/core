@@ -31,14 +31,37 @@ const LoginForm = styled.div`
   align-self: center;
 `;
 
+const GeistSpacer = styled.span`
+  margin-left: 23px;
+  margin-top: 23px;
+`;
+
+const FbButton = styled(Button)`
+  &&& {
+    width: 320px;
+    background-color: #1877f2;
+    border: 1px solid #1877f2;
+    color: white;
+    &:hover {
+      background-color: #166fe5;
+      border: 1px solid #166fe5;
+    }
+  }
+`;
+
 export const AuthenticationOptions = () => (
   <LoginScreen>
     <LoginMain>
       <LoginSign>Login to Vercel</LoginSign>
       <LoginForm>
-        <Button icon={<FacebookSquare size={20} />} full onClick={() => {}}>
-          Continue with Facebook
-        </Button>
+        <GeistSpacer aria-hidden='true' />
+        <FbButton
+          size='large'
+          icon={<FacebookSquare size={20} />}
+          onClick={() => {}}
+        >
+          Login with Facebook
+        </FbButton>
       </LoginForm>
     </LoginMain>
   </LoginScreen>

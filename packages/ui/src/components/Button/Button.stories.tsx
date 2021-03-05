@@ -36,6 +36,9 @@ WithIcon.args = {
   size: 'large',
   style: {
     width: '320px',
+    backgroundColor: '#1877f2',
+    border: '1px solid #1877f2',
+    color: 'white',
   },
 };
 
