@@ -1,16 +1,16 @@
 import { Button } from '@small-ads/ui';
 import React from 'react';
 import styled from 'styled-components';
-import { FacebookSquare } from '@styled-icons/boxicons-logos';
+import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 
-const LoginScreen = styled.div`
+const LoginScreenStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: calc(100vh - 64px);
 `;
 
-const LoginMain = styled.div`
+const LoginStyles = styled.div`
   align-self: center;
   flex: 1 1;
   display: flex;
@@ -24,7 +24,7 @@ const LoginSign = styled.div`
   font-weight: 700;
 `;
 
-const LoginForm = styled.div`
+const LoginButtons = styled.div`
   width: 100%;
   text-align: center;
   max-width: 320px;
@@ -50,19 +50,19 @@ const FacebookButton = styled(Button)`
 `;
 
 export const AuthenticationOptions = () => (
-  <LoginScreen>
-    <LoginMain>
+  <LoginScreenStyles>
+    <LoginStyles>
       <LoginSign>Login to Small-ads</LoginSign>
-      <LoginForm>
+      <LoginButtons>
         <GeistSpacer aria-hidden='true' />
         <FacebookButton
           size='large'
-          icon={<FacebookSquare size={20} />}
+          icon={<Facebook size={20} />}
           onClick={() => {}}
         >
           Login with Facebook
         </FacebookButton>
-      </LoginForm>
-    </LoginMain>
-  </LoginScreen>
+      </LoginButtons>
+    </LoginStyles>
+  </LoginScreenStyles>
 );
