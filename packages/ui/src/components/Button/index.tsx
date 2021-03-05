@@ -10,7 +10,7 @@ export interface ButtonProps {
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
   size?: 'small' | 'medium' | 'large' | '';
-  full?: boolean;
+  fullWidth?: boolean;
   icon?: React.RefAttributes<SVGSVGElement>;
 }
 
@@ -23,10 +23,10 @@ export function Button({
   children,
   onClick,
   size = '',
-  full = false,
+  fullWidth = false,
   icon,
 }: ButtonProps) {
-  const block = full ? 'block' : '';
+  const block = fullWidth ? 'block' : '';
   return (
     <ButtonStyles>
       <button
