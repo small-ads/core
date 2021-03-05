@@ -43,7 +43,7 @@ WithIcon.args = {
 };
 
 export const FullWidth = Template.bind({});
-FullWidth.args = { full: true };
+FullWidth.args = { fullWidth: true };
 
 export const Styled = Template.bind({});
 Styled.args = {
