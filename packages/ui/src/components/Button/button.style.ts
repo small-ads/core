@@ -8,8 +8,6 @@ export const ButtonStyles = styled.div`
   }
 
   button {
-    height: 40px;
-    min-width: auto;
     max-width: calc(50vw - 36px);
     display: inline-flex;
     align-items: center;
@@ -18,9 +16,7 @@ export const ButtonStyles = styled.div`
     font-weight: 500;
     font-family: inherit;
     text-decoration: none;
-    line-height: 38px;
     white-space: nowrap;
-    padding: 0px 25px;
     border-radius: 5px;
     border: 1px solid #000;
     cursor: pointer;
@@ -59,12 +55,18 @@ export const ButtonStyles = styled.div`
     line-height: 22px;
     padding: 0px 10px;
   }
-  .medium {
+  .medium-sm {
     min-width: 70px;
     height: 32px;
     line-height: 0;
     padding: 6px 12px;
     font-size: 0.875rem;
+  }
+  .medium {
+    min-width: auto;
+    height: 40px;
+    line-height: 38px;
+    padding: 0px 25px;
   }
   .large {
     height: 50px;
