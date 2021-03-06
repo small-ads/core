@@ -56,11 +56,7 @@ export const AuthenticationOptions = () => (
       <LoginSign>Login to upload your ads</LoginSign>
       <LoginButtons>
         <GhostSpacer aria-hidden='true' />
-        <FacebookButton
-          size='lg'
-          icon={<Facebook size={20} />}
-          onClick={() => {}}
-        >
+        <FacebookButton size='lg' icon={<Facebook />} onClick={() => {}}>
           Login with Facebook
         </FacebookButton>
       </LoginButtons>

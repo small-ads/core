@@ -59,6 +59,9 @@ export const ButtonStyles = styled.div<CustomProps>`
     height: 24px;
     line-height: 22px;
     padding: 0px 8px;
+    span {
+      width: 16px;
+    }
   }
   .sm {
     min-width: 70px;
@@ -66,16 +69,25 @@ export const ButtonStyles = styled.div<CustomProps>`
     line-height: 0;
     padding: 8px 12px;
     font-size: 0.875rem;
+    span {
+      width: 18px;
+    }
   }
   .md {
     min-width: auto;
     height: 40px;
     line-height: 38px;
     padding: 0px 24px;
+    span {
+      width: 20px;
+    }
   }
   .lg {
     height: 50px;
     padding: 0px 32px;
+    span {
+      width: 22px;
+    }
   }
   .xs,
   .sm,
