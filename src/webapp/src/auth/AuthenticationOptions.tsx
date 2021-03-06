@@ -57,7 +57,7 @@ export const AuthenticationOptions = () => (
       <LoginButtons>
         <GhostSpacer aria-hidden='true' />
         <FacebookButton
-          size='large'
+          size='lg'
           icon={<Facebook size={20} />}
           onClick={() => {}}
         >
