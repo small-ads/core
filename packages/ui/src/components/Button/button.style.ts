@@ -53,23 +53,24 @@ export const ButtonStyles = styled.div`
     min-width: auto;
     height: 24px;
     line-height: 22px;
-    padding: 0px 10px;
+    padding: 0px 8px;
   }
   .sm {
     min-width: 70px;
     height: 32px;
     line-height: 0;
-    padding: 6px 12px;
+    padding: 8px 12px;
     font-size: 0.875rem;
   }
   .md {
     min-width: auto;
     height: 40px;
     line-height: 38px;
-    padding: 0px 25px;
+    padding: 0px 24px;
   }
   .lg {
     height: 50px;
+    padding: 0px 32px;
     span {
       position: absolute;
       display: flex;
