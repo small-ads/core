@@ -71,6 +71,11 @@ export const ButtonStyles = styled.div`
   .lg {
     height: 50px;
     padding: 0px 32px;
+  }
+  .xs,
+  .sm,
+  .md,
+  .lg {
     span {
       position: absolute;
       display: flex;

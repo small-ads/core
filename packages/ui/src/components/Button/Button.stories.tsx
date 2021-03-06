@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button, ButtonProps } from '.';
-import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare';
+import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 
 const Template: Story<ButtonProps> = (args) => (
   <Button {...args}>Call to action </Button>
@@ -32,10 +32,9 @@ LgSecondary.args = { type: 'secondary', size: 'lg' };
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  icon: <FacebookSquare size={20} />,
-  size: 'lg',
+  icon: <Facebook size={20} />,
   style: {
-    width: '320px',
+    width: '220px',
     backgroundColor: '#1877f2',
     border: '1px solid #1877f2',
     color: 'white',
@@ -47,6 +46,7 @@ FullWidth.args = { fullWidth: true };
 
 export const Styled = Template.bind({});
 Styled.args = {
+  icon: <Facebook size={20} />,
   style: {
     backgroundColor: 'seagreen',
     borderRadius: '25px',
