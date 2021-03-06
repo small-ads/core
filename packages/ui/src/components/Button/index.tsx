@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { ButtonStyles } from './button.style';
 
@@ -26,14 +27,13 @@ export function Button({
   fullWidth = false,
   icon,
 }: ButtonProps) {
-  const block = fullWidth ? 'block' : '';
   return (
-    <ButtonStyles>
+    <ButtonStyles fullWidth={fullWidth}>
       <button
         type={submit ? 'submit' : 'button'}
         disabled={disabled}
         onClick={onClick}
-        className={`${className} ${type} ${size} ${block}`}
+        className={`${className} ${type} ${size}`}
         style={style}
       >
         {icon && <span>{icon}</span>}

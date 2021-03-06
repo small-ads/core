@@ -1,13 +1,18 @@
 import styled from 'styled-components';
 import { colors } from '../../constants/colors';
 
-export const ButtonStyles = styled.div`
+interface CustomProps {
+  fullWidth?: boolean;
+}
+
+export const ButtonStyles = styled.div<CustomProps>`
   button:disabled,
   button:disabled .component-child {
     cursor: not-allowed !important;
   }
 
   button {
+    width: ${({ fullWidth }) => (fullWidth ? '100%' : 'initial')};
     max-width: calc(50vw - 36px);
     display: inline-flex;
     align-items: center;
@@ -84,8 +89,5 @@ export const ButtonStyles = styled.div`
       inset: 0px auto 0px 22px;
       z-index: 1;
     }
-  }
-  .block {
-    width: 100%;
   }
 `;
