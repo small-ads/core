@@ -4,10 +4,7 @@ import { Button, ButtonProps } from '.';
 import { FacebookSquare } from '@styled-icons/boxicons-logos/FacebookSquare';
 
 const Template: Story<ButtonProps> = (args) => (
-  <Button {...args}>
-    Call to action to see what happens when we have a very, very long text as
-    the text of our buttons, buttons, buttons
-  </Button>
+  <Button {...args}>Call to action </Button>
 );
 
 export const Primary = Template.bind({});
@@ -15,34 +12,34 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 Secondary.args = { type: 'secondary' };
 
-export const SmallPrimary = Template.bind({});
-SmallPrimary.args = { size: 'small' };
+export const XsPrimary = Template.bind({});
+XsPrimary.args = { size: 'xs' };
 
-export const MediumSmPrimary = Template.bind({});
-MediumSmPrimary.args = { size: 'medium-sm' };
+export const SmPrimary = Template.bind({});
+SmPrimary.args = { size: 'sm' };
 
-export const LargePrimary = Template.bind({});
-LargePrimary.args = { size: 'large' };
+export const LgPrimary = Template.bind({});
+LgPrimary.args = { size: 'lg' };
 
-export const SmallSecondary = Template.bind({});
-SmallSecondary.args = { type: 'secondary', size: 'small' };
+export const XsSecondary = Template.bind({});
+XsSecondary.args = { type: 'secondary', size: 'xs' };
 
-export const MediumSmSecondary = Template.bind({});
-MediumSmSecondary.args = { type: 'secondary', size: 'medium-sm' };
+export const SmSecondary = Template.bind({});
+SmSecondary.args = { type: 'secondary', size: 'sm' };
 
-export const LargeSecondary = Template.bind({});
-LargeSecondary.args = { type: 'secondary', size: 'large' };
+export const LgSecondary = Template.bind({});
+LgSecondary.args = { type: 'secondary', size: 'lg' };
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
   icon: <FacebookSquare size={20} />,
-  size: 'large',
+  size: 'lg',
   style: {
+    width: '320px',
     backgroundColor: '#1877f2',
     border: '1px solid #1877f2',
     color: 'white',
   },
-  fullWidth: true,
 };
 
 export const FullWidth = Template.bind({});

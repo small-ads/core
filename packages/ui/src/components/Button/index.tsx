@@ -9,7 +9,7 @@ export interface ButtonProps {
   className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
-  size?: 'small' | 'medium' | 'medium-sm' | 'large';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
   icon?: React.RefAttributes<SVGSVGElement>;
 }
@@ -22,7 +22,7 @@ export function Button({
   className = '',
   children,
   onClick,
-  size = 'medium',
+  size = 'md',
   fullWidth = false,
   icon,
 }: ButtonProps) {

@@ -49,26 +49,26 @@ export const ButtonStyles = styled.div`
       border: 1px solid ${colors.primary};
     }
   }
-  .small {
+  .xs {
     min-width: auto;
     height: 24px;
     line-height: 22px;
     padding: 0px 10px;
   }
-  .medium-sm {
+  .sm {
     min-width: 70px;
     height: 32px;
     line-height: 0;
     padding: 6px 12px;
     font-size: 0.875rem;
   }
-  .medium {
+  .md {
     min-width: auto;
     height: 40px;
     line-height: 38px;
     padding: 0px 25px;
   }
-  .large {
+  .lg {
     height: 50px;
     span {
       position: absolute;
