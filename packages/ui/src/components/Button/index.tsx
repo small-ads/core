@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { ButtonStyles } from './button.style';
 
@@ -9,7 +10,9 @@ export interface ButtonProps {
   className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
-  size?: 'small' | 'medium';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
+  fullWidth?: boolean;
+  icon?: React.RefAttributes<SVGSVGElement>;
 }
 
 export function Button({
@@ -20,10 +23,12 @@ export function Button({
   className = '',
   children,
   onClick,
-  size,
+  size = 'md',
+  fullWidth = false,
+  icon,
 }: ButtonProps) {
   return (
-    <ButtonStyles>
+    <ButtonStyles fullWidth={fullWidth}>
       <button
         type={submit ? 'submit' : 'button'}
         disabled={disabled}
@@ -31,6 +36,7 @@ export function Button({
         className={`${className} ${type} ${size}`}
         style={style}
       >
+        {icon && <span>{icon}</span>}
         {children}
       </button>
     </ButtonStyles>

@@ -6,6 +6,7 @@
     "@firebase/auth-types": "^0.10.2",
     "@reduxjs/toolkit": "^1.5.0",
     "@small-ads/ui": "^0.1.0",
+    "@styled-icons/boxicons-logos": "^10.23.0",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",

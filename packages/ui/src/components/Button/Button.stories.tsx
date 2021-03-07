@@ -1,9 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Button, ButtonProps } from '.';
+import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 
 const Template: Story<ButtonProps> = (args) => (
-  <Button {...args}>Call to action</Button>
+  <Button {...args}>Call to action </Button>
 );
 
 export const Primary = Template.bind({});
@@ -11,20 +12,41 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 Secondary.args = { type: 'secondary' };
 
-export const MediumPrimary = Template.bind({});
-MediumPrimary.args = { size: 'medium' };
+export const XsPrimary = Template.bind({});
+XsPrimary.args = { size: 'xs' };
 
-export const SmallPrimary = Template.bind({});
-SmallPrimary.args = { size: 'small' };
+export const SmPrimary = Template.bind({});
+SmPrimary.args = { size: 'sm' };
 
-export const MediumSecondary = Template.bind({});
-MediumSecondary.args = { type: 'secondary', size: 'medium' };
+export const LgPrimary = Template.bind({});
+LgPrimary.args = { size: 'lg' };
 
-export const SmallSecondary = Template.bind({});
-SmallSecondary.args = { type: 'secondary', size: 'small' };
+export const XsSecondary = Template.bind({});
+XsSecondary.args = { type: 'secondary', size: 'xs' };
+
+export const SmSecondary = Template.bind({});
+SmSecondary.args = { type: 'secondary', size: 'sm' };
+
+export const LgSecondary = Template.bind({});
+LgSecondary.args = { type: 'secondary', size: 'lg' };
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  icon: <Facebook size={20} />,
+  style: {
+    width: '220px',
+    backgroundColor: '#1877f2',
+    border: '1px solid #1877f2',
+    color: 'white',
+  },
+};
+
+export const FullWidth = Template.bind({});
+FullWidth.args = { fullWidth: true };
 
 export const Styled = Template.bind({});
 Styled.args = {
+  icon: <Facebook size={20} />,
   style: {
     backgroundColor: 'seagreen',
     borderRadius: '25px',
