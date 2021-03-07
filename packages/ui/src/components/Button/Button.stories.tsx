@@ -8,7 +8,7 @@ type Sizes = ['xs', 'sm', 'md', 'lg'];
 const sizes: Sizes = ['xs', 'sm', 'md', 'lg'];
 
 const ButtonsSeparator = styled.div`
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 `;
 
 const Template: Story<ButtonProps> = (args) => {
