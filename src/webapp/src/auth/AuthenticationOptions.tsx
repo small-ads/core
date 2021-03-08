@@ -3,6 +3,7 @@ import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
 import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 import { navbarConstants } from '../components/Navbar';
+import { navbarConstants } from '../components/Navbar/constants';
 
 const LoginScreenStyles = styled.div`
   display: flex;
