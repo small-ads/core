@@ -1,6 +1,8 @@
+/* eslint-disable import/no-cycle */
 import { createSlice } from '@reduxjs/toolkit';
 import { AuthStatuses, Login } from './types';
 import { signInUser, signOutUser } from './asyncAuthActions';
+import { RootState } from '../reducers';
 
 const initialState: Login = {
   uid: undefined,
@@ -44,3 +46,4 @@ export const userSlice = createSlice({
 });
 
 export const userReducer = userSlice.reducer;
+export const selectUser = (state: RootState) => state.user;
