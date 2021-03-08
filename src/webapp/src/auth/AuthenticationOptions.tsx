@@ -43,6 +43,10 @@ const FacebookButton = styled(Button)`
     background-color: #1877f2;
     border: 1px solid #1877f2;
     color: white;
+    span {
+      position: absolute;
+      inset: 0px auto 0px 22px;
+    }
     &:hover {
       background-color: #166fe5;
       border: 1px solid #166fe5;

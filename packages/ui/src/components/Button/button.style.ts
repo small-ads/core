@@ -94,12 +94,10 @@ export const ButtonStyles = styled.div<CustomProps>`
   .md,
   .lg {
     span {
-      position: absolute;
       display: flex;
       -webkit-box-align: center;
       align-items: center;
-      inset: 0px auto 0px 22px;
-      z-index: 1;
+      margin-inline-end: 3px;
     }
   }
 `;
