@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { AuthStatuses } from './types';
 import { signInUser, signOutUser } from './asyncAuthActions';
-import { selectUser } from "./selectors"
+import { selectUser } from './selectors'
 
 const Loader = styled.div`
   border: 12px solid #f3f3f3;
