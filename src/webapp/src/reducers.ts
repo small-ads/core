@@ -1,4 +1,3 @@
-/* eslint-disable import/no-cycle */
 import { combineReducers } from '@reduxjs/toolkit';
 import { userReducer } from './auth/userSlice';
 import { charactersReducer } from './characters/charactersSlice';

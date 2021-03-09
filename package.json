@@ -18,5 +18,8 @@
   "devDependencies": {
     "lerna": "^3.22.1",
     "prettier": "^2.2.1"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
