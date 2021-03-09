@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { useDispatch, useSelector } from 'react-redux';
 import { AuthStatuses } from './types';
-import { RootState } from '../reducers';
 import { signInUser, signOutUser } from './asyncAuthActions';
+import { selectUser } from './selectors'
 
 const Loader = styled.div`
   border: 12px solid #f3f3f3;
@@ -26,7 +26,7 @@ const Loader = styled.div`
 export const Auth = () => {
   const dispatch = useDispatch();
   const { authStatus, uid, displayName, email, error } = useSelector(
-    (state: RootState) => state.user
+    selectUser
   );
 
   const handleSignIn = () => {
