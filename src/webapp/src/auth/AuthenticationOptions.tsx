@@ -3,6 +3,7 @@ import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
 import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
 import { navbarConstants } from '../components/Navbar/constants';
+import { ReactComponent as GoogleLogo } from '../components/svgs/google-logo.svg';
 
 const LoginScreenStyles = styled.div`
   display: flex;
@@ -54,6 +55,20 @@ const FacebookButton = styled(Button)`
   }
 `;
 
+const GoogleButton = styled(Button)`
+  &&& {
+    background-color: white;
+    border: 1px solid #4285f4;
+    width: 320px;
+    color: #4285f4;
+    span {
+      position: absolute;
+      inset: 0px auto 0px 22px;
+      width: 18px;
+    }
+  }
+`;
+
 export const AuthenticationOptions = () => (
   <LoginScreenStyles>
     <LoginStyles>
@@ -63,6 +78,10 @@ export const AuthenticationOptions = () => (
         <FacebookButton size='lg' icon={<Facebook />} onClick={() => {}}>
           Login with Facebook
         </FacebookButton>
+        <GhostSpacer aria-hidden='true' />
+        <GoogleButton size='lg' icon={<GoogleLogo />} onClick={() => {}}>
+          Login with Google
+        </GoogleButton>
       </LoginButtons>
     </LoginStyles>
   </LoginScreenStyles>

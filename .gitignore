@@ -16,6 +16,7 @@ src/*/build
 src/*/coverage
 src/*/node_modules
 src/*/.eslintcache
+src/*/.prettierrc
 src/*/.env
 src/*/yarn-debug.log*
 src/*/yarn-error.log*

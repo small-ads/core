@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { navbarConstants } from './constants';
 
 export const HeaderStyles = styled.div`
   position: sticky;
@@ -8,7 +9,7 @@ export const HeaderStyles = styled.div`
   width: 100%;
   max-width: 100%;
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
-  min-height: 64px;
+  min-height: ${navbarConstants.height};
 `;
 
 export const Header = styled.div`
