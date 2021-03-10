@@ -66,9 +66,6 @@ const GoogleButton = styled(Button)`
       inset: 0px auto 0px 22px;
       width: 18px;
     }
-    &:hover {
-      box-shadow: 0 0 6px #4285f4;
-    }
   }
 `;
 
