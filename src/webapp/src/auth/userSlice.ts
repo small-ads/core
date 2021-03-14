@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { AuthStatuses, Login } from './types';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { AuthStatuses, Login, UserData } from './types';
 import { signInUser, signOutUser } from './asyncAuthActions';
 
 const initialState: Login = {
@@ -12,7 +12,15 @@ const initialState: Login = {
 export const userSlice = createSlice({
   name: 'user',
   initialState,
-  reducers: {},
+  reducers: {
+    login: (state, { payload }: PayloadAction<UserData>) => {
+      const { uid, displayName, email } = payload;
+      state.uid = uid;
+      state.displayName = displayName!;
+      state.email = email!;
+      state.authStatus = AuthStatuses.loggedIn;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(signInUser.pending, (state) => {
       state.authStatus = AuthStatuses.loading;
@@ -43,4 +51,5 @@ export const userSlice = createSlice({
   },
 });
 
+export const { login } = userSlice.actions;
 export const userReducer = userSlice.reducer;
