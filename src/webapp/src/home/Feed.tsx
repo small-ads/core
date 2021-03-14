@@ -8,7 +8,7 @@ export const Feed = () => {
   const { authStatus } = useSelector(selectUser);
 
   if (authStatus !== AuthStatuses.loggedIn) {
-    return <Redirect to='/login' />;
+    return <Redirect to="/login" />;
   }
 
   return (

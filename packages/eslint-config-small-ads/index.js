@@ -7,6 +7,7 @@ module.exports = {
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
     'airbnb-typescript',
     'prettier',
     'prettier/react',
