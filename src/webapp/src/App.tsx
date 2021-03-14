@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { AuthenticationOptions } from './auth/AuthenticationOptions';
 import { Auth } from './auth/Auth';
-import { Dashboard } from './home/Dashboard';
+import { Feed } from './home/Feed';
 
 export const App = () => (
   <>
@@ -13,7 +13,7 @@ export const App = () => (
       <Navbar />
       <Switch>
         <Route path='/login' component={AuthenticationOptions} />
-        <Route path='/dashboard' component={Dashboard} />
+          <Route path='/feed' component={Feed} />
         <Route exact path='/' component={Auth} />
       </Switch>
     </Router>

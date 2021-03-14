@@ -79,7 +79,7 @@ export const AuthenticationOptions = () => {
   const { authStatus } = useSelector(selectUser);
 
   if (authStatus === AuthStatuses.loggedIn) {
-    return <Redirect to='/dashboard' />;
+    return <Redirect to='/feed' />;
   }
   const handleSignIn = () => {
     dispatch(signInUser());

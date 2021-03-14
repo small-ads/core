@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { signOutUser } from '../../auth/asyncAuthActions';
 import { Header, HeaderStyles } from './navbar.style';
 import { selectUser } from '../../auth/selectors';
+import { AuthStatuses } from '../../auth/types';
 
 export const Navbar = () => {
   const history = useHistory();
@@ -12,24 +13,23 @@ export const Navbar = () => {
   const dispatch = useDispatch();
   const { authStatus } = useSelector(selectUser);
 
-  const handleLogout = () => {
-    dispatch(signOutUser());
-  };
+  const handleLogout = () => dispatch(signOutUser());
+
+  const handleGoToLogin = () => history.push('/login');
+
   return (
     <HeaderStyles>
       <Header>
-        {!authStatus && (
+        {authStatus !== AuthStatuses.loggedIn && (
           <Button
             disabled={Boolean(route?.isExact)}
             size='sm'
-            onClick={() => {
-              history.push('/login');
-            }}
+            onClick={handleGoToLogin}
           >
             Login
           </Button>
         )}
-        {Boolean(authStatus) && (
+        {Boolean(authStatus === AuthStatuses.loggedIn) && (
           <Button type='secondary' size='sm' onClick={handleLogout}>
             Logout
           </Button>
