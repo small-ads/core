@@ -13,7 +13,7 @@ export const App = () => (
       <Navbar />
       <Switch>
         <Route path='/login' component={AuthenticationOptions} />
-          <Route path='/feed' component={Feed} />
+        <Route path='/feed' component={Feed} />
         <Route exact path='/' component={Auth} />
       </Switch>
     </Router>
