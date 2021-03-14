@@ -79,7 +79,7 @@ export const AuthenticationOptions = () => {
   const { authStatus } = useSelector(selectUser);
 
   if (authStatus === AuthStatuses.loggedIn) {
-    return <Redirect to='/feed' />;
+    return <Redirect to="/feed" />;
   }
   const handleSignIn = () => {
     dispatch(signInUser());
@@ -90,12 +90,12 @@ export const AuthenticationOptions = () => {
       <LoginStyles>
         <LoginSign>Login to upload your ads</LoginSign>
         <LoginButtons>
-          <GhostSpacer aria-hidden='true' />
-          <FacebookButton size='lg' icon={<Facebook />} onClick={() => {}}>
+          <GhostSpacer aria-hidden="true" />
+          <FacebookButton size="lg" icon={<Facebook />} onClick={() => {}}>
             Login with Facebook
           </FacebookButton>
-          <GhostSpacer aria-hidden='true' />
-          <GoogleButton size='lg' icon={<GoogleLogo />} onClick={handleSignIn}>
+          <GhostSpacer aria-hidden="true" />
+          <GoogleButton size="lg" icon={<GoogleLogo />} onClick={handleSignIn}>
             Login with Google
           </GoogleButton>
         </LoginButtons>

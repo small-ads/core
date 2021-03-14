@@ -23,14 +23,14 @@ export const Navbar = () => {
         {authStatus !== AuthStatuses.loggedIn && (
           <Button
             disabled={Boolean(route?.isExact)}
-            size='sm'
+            size="sm"
             onClick={handleGoToLogin}
           >
             Login
           </Button>
         )}
         {Boolean(authStatus === AuthStatuses.loggedIn) && (
-          <Button type='secondary' size='sm' onClick={handleLogout}>
+          <Button type="secondary" size="sm" onClick={handleLogout}>
             Logout
           </Button>
         )}
