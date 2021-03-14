@@ -13,7 +13,7 @@ export const signInUser = createAsyncThunk<
     const { displayName, uid, email } = user!;
     return { uid, displayName, email };
   } catch (error) {
-    return rejectWithValue(error);
+    return rejectWithValue(error.message);
   }
 });
 
