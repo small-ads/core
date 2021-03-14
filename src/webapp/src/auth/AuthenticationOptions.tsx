@@ -1,8 +1,13 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 import { Button } from '@small-ads/ui';
 import styled from 'styled-components';
 import { Facebook } from '@styled-icons/boxicons-logos/Facebook';
+import { useDispatch, useSelector } from 'react-redux';
 import { navbarConstants } from '../components/Navbar/constants';
+import { AuthStatuses } from './types';
+import { signInUser } from './asyncAuthActions';
+import { selectUser } from './selectors';
 import { ReactComponent as GoogleLogo } from '../components/svgs/google-logo.svg';
 
 const LoginScreenStyles = styled.div`
@@ -69,20 +74,32 @@ const GoogleButton = styled(Button)`
   }
 `;
 
-export const AuthenticationOptions = () => (
-  <LoginScreenStyles>
-    <LoginStyles>
-      <LoginSign>Login to upload your ads</LoginSign>
-      <LoginButtons>
-        <GhostSpacer aria-hidden='true' />
-        <FacebookButton size='lg' icon={<Facebook />} onClick={() => {}}>
-          Login with Facebook
-        </FacebookButton>
-        <GhostSpacer aria-hidden='true' />
-        <GoogleButton size='lg' icon={<GoogleLogo />} onClick={() => {}}>
-          Login with Google
-        </GoogleButton>
-      </LoginButtons>
-    </LoginStyles>
-  </LoginScreenStyles>
-);
+export const AuthenticationOptions = () => {
+  const dispatch = useDispatch();
+  const { authStatus } = useSelector(selectUser);
+
+  if (authStatus === AuthStatuses.loggedIn) {
+    return <Redirect to='/feed' />;
+  }
+  const handleSignIn = () => {
+    dispatch(signInUser());
+  };
+
+  return (
+    <LoginScreenStyles>
+      <LoginStyles>
+        <LoginSign>Login to upload your ads</LoginSign>
+        <LoginButtons>
+          <GhostSpacer aria-hidden='true' />
+          <FacebookButton size='lg' icon={<Facebook />} onClick={() => {}}>
+            Login with Facebook
+          </FacebookButton>
+          <GhostSpacer aria-hidden='true' />
+          <GoogleButton size='lg' icon={<GoogleLogo />} onClick={handleSignIn}>
+            Login with Google
+          </GoogleButton>
+        </LoginButtons>
+      </LoginStyles>
+    </LoginScreenStyles>
+  );
+};
