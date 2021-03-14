@@ -11,8 +11,8 @@ export const App = () => (
       <GlobalStyle />
       <Navbar />
       <Switch>
-        <Route path='/login' component={AuthenticationOptions} />
-        <Route exact path='/' component={Auth} />
+        <Route path="/login" component={AuthenticationOptions} />
+        <Route exact path="/" component={Auth} />
       </Switch>
     </Router>
   </>

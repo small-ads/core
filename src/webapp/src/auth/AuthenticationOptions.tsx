@@ -74,12 +74,12 @@ export const AuthenticationOptions = () => (
     <LoginStyles>
       <LoginSign>Login to upload your ads</LoginSign>
       <LoginButtons>
-        <GhostSpacer aria-hidden='true' />
-        <FacebookButton size='lg' icon={<Facebook />} onClick={() => {}}>
+        <GhostSpacer aria-hidden="true" />
+        <FacebookButton size="lg" icon={<Facebook />} onClick={() => {}}>
           Login with Facebook
         </FacebookButton>
-        <GhostSpacer aria-hidden='true' />
-        <GoogleButton size='lg' icon={<GoogleLogo />} onClick={() => {}}>
+        <GhostSpacer aria-hidden="true" />
+        <GoogleButton size="lg" icon={<GoogleLogo />} onClick={() => {}}>
           Login with Google
         </GoogleButton>
       </LoginButtons>
