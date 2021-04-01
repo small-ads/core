@@ -43,7 +43,7 @@ export const Auth = () => {
     );
   }
 
-  if (authStatus === AuthStatuses.loading) {
+  if (authStatus === AuthStatuses.pending) {
     return <Loader />;
   }
 

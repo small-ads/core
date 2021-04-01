@@ -5,9 +5,9 @@ export interface UserData {
 }
 
 export enum AuthStatuses {
-  notLoggedIn,
-  loggedIn,
-  loading,
+  notLoggedIn = 'notLoggedIn',
+  loggedIn = 'loggedIn',
+  pending = 'pending',
 }
 
 export interface Login {
