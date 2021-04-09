@@ -1,15 +1,16 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { AuthError } from '@firebase/auth-types';
-import { auth, provider } from '../firebase';
+import { AuthError, AuthProvider } from '@firebase/auth-types';
+import { auth } from '../firebase';
 import { UserData } from './types';
 
 export const signInUser = createAsyncThunk<
   UserData,
-  void,
+  AuthProvider,
   { rejectValue: AuthError }
->('user/sigInUser', async (_, { rejectWithValue }) => {
+>('user/sigInUser', async (provider: AuthProvider, { rejectWithValue }) => {
   try {
     const { user } = await auth.signInWithPopup(provider)!;
+
     const { displayName, uid, email } = user!;
     return { uid, displayName, email };
   } catch (error) {

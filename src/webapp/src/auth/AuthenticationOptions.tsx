@@ -9,6 +9,7 @@ import { AuthStatuses } from './types';
 import { signInUser } from './asyncAuthActions';
 import { selectUser } from './selectors';
 import { ReactComponent as GoogleLogo } from '../components/svgs/google-logo.svg';
+import { facebookProvider, googleProvider } from '../firebase';
 
 const LoginScreenStyles = styled.div`
   display: flex;
@@ -81,8 +82,11 @@ export const AuthenticationOptions = () => {
   if (authStatus === AuthStatuses.loggedIn) {
     return <Redirect to="/feed" />;
   }
-  const handleSignIn = () => {
-    dispatch(signInUser());
+  const handleGoogleSignIn = () => {
+    dispatch(signInUser(googleProvider));
+  };
+  const handleFacebookSignIn = () => {
+    dispatch(signInUser(facebookProvider));
   };
 
   return (
@@ -91,11 +95,19 @@ export const AuthenticationOptions = () => {
         <LoginSign>Login to upload your ads</LoginSign>
         <LoginButtons>
           <GhostSpacer aria-hidden="true" />
-          <FacebookButton size="lg" icon={<Facebook />} onClick={() => {}}>
+          <FacebookButton
+            size="lg"
+            icon={<Facebook />}
+            onClick={handleFacebookSignIn}
+          >
             Login with Facebook
           </FacebookButton>
           <GhostSpacer aria-hidden="true" />
-          <GoogleButton size="lg" icon={<GoogleLogo />} onClick={handleSignIn}>
+          <GoogleButton
+            size="lg"
+            icon={<GoogleLogo />}
+            onClick={handleGoogleSignIn}
+          >
             Login with Google
           </GoogleButton>
         </LoginButtons>
