@@ -1,5 +1,5 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { AuthStatuses, Login } from './types';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { AuthStatuses, Login, UserData } from './types';
 import { signInUser, signOutUser } from './asyncAuthActions';
 
 const initialState: Login = {
@@ -7,15 +7,26 @@ const initialState: Login = {
   displayName: undefined,
   email: undefined,
   error: null,
-  authStatus: AuthStatuses.notLoggedIn,
+  authStatus: AuthStatuses.pending,
 };
 export const userSlice = createSlice({
   name: 'user',
   initialState,
-  reducers: {},
+  reducers: {
+    login: (state, { payload }: PayloadAction<UserData>) => {
+      const { uid, displayName, email } = payload;
+      state.uid = uid;
+      state.displayName = displayName!;
+      state.email = email!;
+      state.authStatus = AuthStatuses.loggedIn;
+    },
+    notLoggedIn: (state) => {
+      state.authStatus = AuthStatuses.notLoggedIn;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(signInUser.pending, (state) => {
-      state.authStatus = AuthStatuses.loading;
+      state.authStatus = AuthStatuses.pending;
     });
     builder.addCase(signInUser.rejected, (state, action) => {
       state.error = action.payload?.message || action.error?.message;
@@ -29,7 +40,7 @@ export const userSlice = createSlice({
       state.authStatus = AuthStatuses.loggedIn;
     });
     builder.addCase(signOutUser.pending, (state) => {
-      state.authStatus = AuthStatuses.loading;
+      state.authStatus = AuthStatuses.pending;
     });
     builder.addCase(signOutUser.rejected, (state, action) => {
       state.error = action.error?.message;
@@ -43,4 +54,5 @@ export const userSlice = createSlice({
   },
 });
 
+export const { login, notLoggedIn } = userSlice.actions;
 export const userReducer = userSlice.reducer;
