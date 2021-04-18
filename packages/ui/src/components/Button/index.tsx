@@ -5,7 +5,7 @@ export interface ButtonProps {
   type?: 'primary' | 'secondary';
   submit?: boolean;
   disabled?: boolean;
-  style?: object;
+  style?: React.CSSProperties;
   className?: string;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children: React.ReactNode;
